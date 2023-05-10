@@ -38,7 +38,7 @@ class BayutScraper:
         uri = os.getenv("MONGO URI")
         client = MongoClient(uri, server_api=ServerApi('1'))
         db = client['bayut']
-        collection = db['listings']
+        collection = db['all_listings']
 
         result = collection.insert_one(data)
         print(f"Inserted listing with id {result.inserted_id}")
