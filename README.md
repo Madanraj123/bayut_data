@@ -39,3 +39,21 @@ The first dictionary contains a single request that queries the "bayut-productio
 The second dictionary contains two requests. The first request queries the "bayut-production-locations-en" index and retrieves one hit per page. The query filters the results to include only the location with the slug "/dubai". The attributes to be retrieved include all available information about the location.
 
 The second request queries the "bayut-production-ads-en" index and retrieves 24 hits per page. The query does not include any specific filters, but retrieves properties based on the page number. The attributes to be retrieved include information about the properties, such as agency, area, baths, price, rooms, and more.
+
+
+STEPS I DID:
+
+
+1. Gone through the bayut website and understood the data it provides.
+2. Created a mongo db instance to store the data.
+3. https://www.topcoder.com/thrive/articles/web-crawler-in-python understood web crawling
+4. tried creating programmable google engine, failed
+5. tried third party api and github api checked, but worthless
+6. checked with html parser, but thats not what they wanted
+6. tried with wrap api and other api resources and understood the request and response in bayut
+7. gone with developer tools to get the data
+8. tried to understand the response 
+9. Collected data for dubai, rent and buy properties.
+10. Pushed to mongo db cloud(free service)
+11. Tried multiple aggregations in mongodb but had memory issues in using free trial.
+12. Created python script for duplicate entries with area,rooms,location and cateogory
